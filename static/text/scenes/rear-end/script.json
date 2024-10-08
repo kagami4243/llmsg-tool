@@ -1,0 +1,22 @@
+{
+    "VUT": {
+        "model": "car",
+        "init_state": [2, 30, 8]
+    },
+    "front_car": {
+        "model": "car",
+        "init_state": [2, 20, 8],
+        "steps": [
+            {
+                "action": "slow down",
+                "termination_condition": "when the car's speed is reduced to 0 m/s",
+                "reason": "Abrupt deceleration to cause a rear-end collision."
+            },
+            {
+                "action": "Maintain 0 m/s speed lane 2", 
+                "termination_condition": "Hold for the next 10 seconds", 
+                "reason": ""
+            }
+        ]
+    }
+}

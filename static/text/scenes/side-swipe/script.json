@@ -1,0 +1,29 @@
+{
+    "moving_truck": {
+        "init_position": [1, -38, 5.0],
+        "model": "truck",
+        "steps": [
+            {
+                "action": "move in current lane at 5m/s",
+                "termination_condition": "end of scenario",
+                "reason": ""
+            }
+        ]
+    },
+    "car": {
+        "init_position": [2, -48, 10.0],
+        "model": "car",
+        "steps": [
+            {
+                "action": "close the distance to the vehicle",
+                "termination_condition": "your longitudinal position to the vehicle is approximately +/- 2 meter",
+                "reason": ""
+            },
+            {
+                "action": "execute the side-swipe maneuver by changing into the lane of the vehicle",
+                "termination_condition": "end of scenario",
+                "reason": ""
+            }
+        ]
+    }
+}

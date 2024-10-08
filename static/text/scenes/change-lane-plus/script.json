@@ -1,0 +1,32 @@
+{
+    "VUT": {
+        "model": "car",
+        "init_state": [1, 30, 6]
+    },
+    "other_car": {
+        "model": "car",
+        "init_state": [1, 10, 6],
+        "steps": [
+            {
+                "action": "Change from lane 1 to lane 2",
+                "termination_condition": "Completely in lane 2",
+                "reason": "Logical intermediary step in changing lanes."
+            },
+            {
+                "action": "Change from lane 2 to lane 3",
+                "termination_condition": "Completely in lane 3",
+                "reason": "Logical intermediary step in changing lanes."
+            },
+            {
+                "action": "Change from lane 3 to lane 4",
+                "termination_condition": "Completely in lane 4",
+                "reason": "Final destination for lane-changing maneuver."
+            },
+            {
+                "action": "Maintain 6 m/s speed in lane 4", 
+                "termination_condition": "Hold for the next 10 seconds", 
+                "reason": ""
+            }
+        ]
+    }
+}
