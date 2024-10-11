@@ -114,7 +114,7 @@
         <div class="col">
           <div class="input-group mb-3">
             <button type="button" class="btn btn-outline-secondary" disabled>场景</button>
-            <input id="currenScene" readonly type="text" class="form-control" value="accident"/>
+            <input id="currenScene" readonly type="text" class="form-control" value="Accident"/>
             <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
               data-bs-toggle="dropdown" aria-expanded="false">
               <span class="visually-hidden">Toggle Dropdown</span>
@@ -156,7 +156,7 @@
           <div id="showResult" style="height: 360px; width: 640px;">
             <video poster="" id="tree" controls autoplay muted loop height="100%" width="100%">
                 <!-- Your video here -->
-                <source src="static/videos/accident.mp4" type="video/mp4"/>
+                <source src="static/videos/Accident.mp4" type="video/mp4"/>
             </video>
           </div>
           实际模拟录制视频的回放
@@ -209,7 +209,7 @@
       $("#currenScene").val(scene);
       getJson("static/text/scenes/"+scene+"/script.json")
     });
-    getJson("static/text/scenes/accident/script.json");
+    getJson("static/text/scenes/Accident/script.json");
   });
 
 </script>
