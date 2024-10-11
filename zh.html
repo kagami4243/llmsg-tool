@@ -32,10 +32,10 @@
           <div class="container is-max-desktop">
             <div class="columns is-centered">
               <div class="column has-text-centered">
-                <h1 class="title is-1 publication-title">LASER: Script Execution by Autonomous
-                    Agents for On-demand Traffic Simulation</h1>
+                <h1 class="title is-1 publication-title">LASER: 由自主代理执行脚本以进行按需交通模拟</h1>
     
-                  English | <a href=zh.html>中文</a>
+                <a href=index.html>English</a> | 中文
+                
                 <div class="column has-text-centered">
                   <div class="publication-links">
     
@@ -63,16 +63,16 @@
         <div class="container is-max-desktop">
           <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
-              <h2 class="title is-3">Abstract</h2>
+              <h2 class="title is-3">摘要</h2>
               <div class="content has-text-justified">
                 <p>
                   <b>
-                    Autonomous Driving Systems (ADS) require diverse and safety-critical traffic
-                    scenarios for effective training and testing, but the existing data generation methods struggle to provide flexibility and scalability. We propose LASER, a novel
-                    framework that leverage large language models (LLMs) to conduct traffic simulations based on natural language inputs. The framework operates in two stages: it
-                    first generates scripts from user-provided descriptions and then executes them using autonomous agents in real time. Validated in the CARLA simulator, LASER
-                    successfully generates complex, on-demand driving scenarios, significantly improving ADS training and testing data generation.
-
+                    自动驾驶系统（ADS）需要多样且对安全至关重要的交通场景以进行有效的训练和测试，
+                    但现有的数据生成方法在灵活性和可扩展性方面存在困难。我们提出了LASER，
+                    这是一种新颖的框架，利用大语言模型（LLM）基于自然语言输入进行交通模拟。
+                    该框架分为两个阶段：首先从用户提供的描述中生成脚本，然后使用自主代理在实时环境中执行这些脚本。
+                    在CARLA模拟器中验证后，LASER能够成功生成复杂的、按需定制的驾驶场景，
+                    显著改善了ADS训练和测试数据的生成。
                   </b>
                 </p>
               </div>
@@ -86,16 +86,17 @@
       <!-- Framework. -->   
       <section class="section" id="Framework">
         <div class="container is-max-desktop">
-          <h2 class="title">Framework</h2>
+          <h2 class="title">框架</h2>
           <div class="hero-body">
             <center>
                 <img src="static/images/framework.png" width="80%"/>
             </center>
             <h2 class="subtitle has-text-justified" style="padding-top: 1rem;" style="width: 80%;">
-                To achieve on-demand and interactive traffic simulation, we propose a framework called LASER.<br/>
-                LASER consists of two stages, implemented by two modules respectively, i.e., <b>script writer</b> and <b>LASER-Agent</b>. Unlike the previous learning based methods that conduct generation and simulation simultaneously, our LASER framework first
-                generates scripts that define logic-chained behaviors (LCB) with natural language instructions from
-                the user requirements. It then executes the script by the real-time cooperation of LASER-Agents.
+                为了实现按需和交互式的交通模拟，我们提出了一个名为 LASER 的框架。<br/>
+                LASER 由两个阶段组成，分别由两个模块实现，即<b>脚本编写器（script writer）</b>和<b>LARSER代理（LASER-Agent）</b>。
+                与之前基于学习的方法同时进行生成和模拟不同，我们的 LASER 框架首先生成脚本，
+                这些脚本根据用户需求的自然语言指令定义逻辑链行为（LCB）。然后，
+                通过 LARSER代理 的实时协作来执行脚本。
             </h2>
           </div>
         </div>
@@ -104,15 +105,15 @@
   <!--show video here-->
   <section class="section" id="LiveDemo">
     <div class="container is-max-desktop">
-      <h2 class="title">Result:</h2>
+    <h2 class="title">结果：</h2>
       <ol>
-        <li>Select the Scene, and you will see the corresponding script.</li>
-        <li>Click Run, and you will see the playback of the actual simulated recorded video.</li>
+          <li>选择场景，你将看到对应的脚本。</li>
+          <li>点击运行，你将看到实际模拟录制视频的回放。</li>
       </ol>
       <div class="row g-3">
         <div class="col">
           <div class="input-group mb-3">
-            <button type="button" class="btn btn-outline-secondary" disabled>Scene</button>
+            <button type="button" class="btn btn-outline-secondary" disabled>场景</button>
             <input id="currenScene" readonly type="text" class="form-control" value="accident"/>
             <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
               data-bs-toggle="dropdown" aria-expanded="false">
@@ -142,23 +143,23 @@
           </div>
         </div>
         <div class="col">
-          <button type="button" class="btn btn-outline-secondary w-100" onclick="viewScene()">Run</button>
+          <button type="button" class="btn btn-outline-secondary w-100" onclick="viewScene()">运行</button>
         </div>
       </div>
       <div class="row g-3" style="margin-top: 1rem;">
         <div class="col">
-          <p class="fw-bold">Scene Script</p>
+          <p class="fw-bold">场景脚本</p>
           <pre id="showSceneScript" style="height: 500px; width:630px; overflow-y: auto; background-color: #f5f5f5;"></pre>
         </div>
         <div class="col has-text-centered">
-          <p class="fw-bold">Result Video</p>
+          <p class="fw-bold">结果视频</p>
           <div id="showResult" style="height: 360px; width: 640px;">
             <video poster="" id="tree" controls autoplay muted loop height="100%" width="100%">
                 <!-- Your video here -->
                 <source src="static/videos/accident.mp4" type="video/mp4"/>
             </video>
           </div>
-          This is the playback of the actual simulated recorded video
+          实际模拟录制视频的回放
         </div>
       </div>
     </div>
