@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/table.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -23,6 +24,7 @@
   <script src="static/js/index.js"></script>
   <script src="https://kit.fontawesome.com/dcd6d05807.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -165,23 +167,115 @@
   <!-- </section> -->
 
 
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
 
-            <p style="text-align: center;"><i class="fa-solid fa-heart fa-beat-fade" style="color: #ff8787;"></i>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
-                target="_blank">Academic Project Page Template</a> <i class="fa-solid fa-heart fa-beat-fade"
-                style="color: #ff8787;"></i>
-            </p>
+  <!--criteria for reviewing simulations-->
+  <section class="section" id="Criteria">
+    <div class="container is-max-desktop">
+      <h2 class="title">Criteria for reviewing simulations:</h2>
+      We present the criteria for reviewing simulations to evaluate the effectiveness of script execution.
+      <table>
+        <tr>
+            <th>Scene</th>
+            <th>Criteria</th>
+        </tr>
+        <tr>
+            <td>Accident</td>
+            <td>The two cars correctly change lanes according to their scripts before colliding with the stopped accident vehicles</td>
+        </tr>
+        <tr>
+            <td>Ambulance</td>
+            <td>As the ambulance approaches, vehicles in the same lane move aside one
+              by one to make way, without any collisions.</td>
+        </tr>
+        <tr>
+            <td>Bus</td>
+            <td>The bus changes lanes and stops at the bus station within a ±2.5m range,
+              then starts again and changes lanes back.</td>
+        </tr>
+        <tr>
+          <td>Caught in Pincer</td>
+          <td>The sudden lane change by the front car and the acceleration of the rear car caused a collision involving three vehicles.</td>
+        </tr>
+        <tr>
+          <td>Cut-in</td>
+          <td>The car successfully overtakes the front car then slows down.</td>
+        </tr>
+        <tr>
+          <td>Failed at Start</td>
+          <td>The collision occurred when the vehicle started moving as the bus changed lanes.</td>
+        </tr>
+        <tr>
+          <td>Meet in Mind 1</td>
+          <td>Two cars simultaneously changed lanes towards the center, leading to a collision.</td>
+        </tr>
+        <tr>
+          <td>Meet in Mind 2</td>
+          <td>Two cars attempted to overtake at the same time, and a collision occurred when both vehicles changed lanes simultaneously.</td>
+        </tr>
+        <tr>
+          <td>Merge Alternately</td>
+          <td>Vehicles alternately passed through the left lane of the two cars stopped due to the collision.</td>
+        </tr>
+        <tr>
+          <td>Newbie Lane Change 1</td>
+          <td>The vehicle in the front right slowly changed lanes to the left, causing a collision with ego car.</td>
+        </tr>
+        <tr>
+          <td>Newbie Lane Change 2</td>
+          <td>The vehicle in the front right slowly changed lanes to the left, causing a collision with ego car.</td>
+        </tr>
+        <tr>
+          <td>Reckless Driving</td>
+          <td>The reckless car successfully overtakes the first car from the left lane and
+            the second car from the right lane.</td>
+        </tr>
+        <tr>
+          <td>Sudden Jaywalker</td>
+          <td>The jaywalker steps out from behind the truck as the ego vehicle approaches.</td>
+        </tr>
+        <tr>
+          <td>Surrounded</td>
+          <td>Four police cars are driving in the front, rear, left, and right directions of the vehicle, respectively.</td>
+        </tr>
+        <tr>
+          <td>Swerve</td>
+          <td>The front car decelerates to a stop. The rear car changes into the ego
+            vehicle's lane, nearly hitting the ego vehicle before colliding with the front
+            car.</td>
+        </tr>
+        <tr>
+          <td>Three in Line 1</td>
+          <td>The front car decelerates to a stop, while the rear car changes lanes to the
+            right before colliding with the front car, and then drives away</td>
+        </tr>
+        <tr>
+          <td>Three in Line 2</td>
+          <td>The vehicle in front slowed down and stopped, and the vehicle behind collided 
+            with it and stopped. Ego vehicle intends to turn right to avoid a collision.</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  
 
-          </div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p style="text-align: center;"><i class="fa-solid fa-heart fa-beat-fade" style="color: #ff8787;"></i>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+              target="_blank">Academic Project Page Template</a> <i class="fa-solid fa-heart fa-beat-fade"
+              style="color: #ff8787;"></i>
+          </p>
+
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
 </body>
 <script>
