@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/table.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -41,7 +42,7 @@
     
                     <!-- Github link -->
                     <span class="link-block">
-                      <a href="https://github.com/" target="_blank"
+                      <a href="https://github.com/CXYyp5SkNg/CXYyp5SkNg.github.io" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fab fa-github"></i>
@@ -164,6 +165,88 @@
       </div>
     </div>
   <!-- </section> -->
+
+    <!--criteria for reviewing simulations-->
+  <section class="section" id="Criteria">
+    <div class="container is-max-desktop">
+      <h2 class="title">场景生成正确性的标准:</h2>
+      我们提出了人工评价场景生成正确性的标准.
+      <table>
+        <tr>
+            <th>场景</th>
+            <th>标准</th>
+        </tr>
+        <tr>
+            <td>Accident</td>
+            <td>两辆车按照脚本正确变道，避免与前方事故车辆相撞。</td>
+        </tr>
+        <tr>
+            <td>Ambulance</td>
+            <td>当救护车接近时，同车道的车辆一个接一个地让道，没有发生任何碰撞。</td>
+        </tr>
+        <tr>
+            <td>Bus</td>
+            <td>公交车变道并在停靠在公交站误差2.5米范围内，然后再次启动并变道回来。</td>
+        </tr>
+        <tr>
+          <td>Caught in Pincer</td>
+          <td>前车突然变道和后车加速导致三辆车发生碰撞。</td>
+        </tr>
+        <tr>
+          <td>Cut-in</td>
+          <td>汽车成功超越前车后减速。</td>
+        </tr>
+        <tr>
+          <td>Failed at Start</td>
+          <td>当车辆启动时与变道的公交车发生碰撞。</td>
+        </tr>
+        <tr>
+          <td>Meet in Mind 1</td>
+          <td>两辆车同时向中间车道变道导致相撞。</td>
+        </tr>
+        <tr>
+          <td>Meet in Mind 2</td>
+          <td>两辆车同时尝试超车，且在同时变道时发生碰撞。</td>
+        </tr>
+        <tr>
+          <td>Merge Alternately</td>
+          <td>车辆交替通过因碰撞而停下的两辆车的左侧车道。</td>
+        </tr>
+        <tr>
+          <td>Newbie Lane Change 1</td>
+          <td>前右方车辆缓慢向左变道，与自车发生碰撞。</td>
+        </tr>
+        <tr>
+          <td>Newbie Lane Change 2</td>
+          <td>前右方车辆缓慢向左变道，与自车发生碰撞。</td>
+        </tr>
+        <tr>
+          <td>Reckless Driving</td>
+          <td>鲁莽的车辆成功从左车道超越第一辆车，并从右车道超越第二辆车。</td>
+        </tr>
+        <tr>
+          <td>Sudden Jaywalker</td>
+          <td>当自车接近时行人从卡车后面走出。</td>
+        </tr>
+        <tr>
+          <td>Surrounded</td>
+          <td>四辆警车分别在车辆的前、后、左、右方向行驶。</td>
+        </tr>
+        <tr>
+          <td>Swerve</td>
+          <td>前车减速停车，后车在与前车相撞前变道进入自车车道，差点撞上自车。</td>
+        </tr>
+        <tr>
+          <td>Three in Line 1</td>
+          <td>前车减速停车，后车在与前车相撞前向右变道，然后驶离。</td>
+        </tr>
+        <tr>
+          <td>Three in Line 2</td>
+          <td>前方车辆减速并停下，后方车辆与其相撞并停下。自车打算右转以避免碰撞。</td>
+        </tr>
+      </table>
+    </div>
+  </section>
 
 
   <footer class="footer">
